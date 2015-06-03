@@ -1,0 +1,35 @@
+name1 = 'larry'
+name2 = 'rat'
+name3 = 'cat'
+name4 = 'shemp'
+health1 = 60
+health2 = 24
+health3 = 300
+health4 = 90
+
+puts "\n#{name1.capitalize}'s health is #{health1 * 3}"
+puts "\n#{name2.upcase}'s health is #{health2 * 3}\n"
+puts "#{name3.capitalize} has a health of #{health3}.".center(50,'*')
+puts "#{name4.capitalize.ljust(30,'.')}" + "#{health4} health"
+
+puts "\nPlayers:\n\t#{name1.capitalize}\n\t#{name2.upcase}\n\t#{name3}"
+
+current_time = Time.new
+formatted_time = current_time.strftime("%A %m/%d/%Y at %I:%M%p")
+puts "\nThe game started on #{formatted_time}"
+
+def time_now
+  #curTime = Time.now
+  Time.now.strftime("%I:%M:%S")
+end
+
+def say_hello(name, health=100)
+  "\nI'm #{name.capitalize} with a health of #{health} as of #{time_now}."
+end
+
+puts say_hello("larry", 60)
+puts say_hello("rat", 20)
+puts say_hello("cat", 400)
+puts say_hello("shemp")
+
+
